@@ -1,0 +1,136 @@
+* {
+  box-sizing: border-box;
+}
+
+html {
+  font-size: 62.5%;
+}
+
+body {
+  display: grid;
+  place-content: center;
+  width: 100%;
+  height: 100vh;
+  margin: 0;
+  background-color: hsl(217, 54%, 11%);
+}
+
+.main-wrapper {
+  display: grid;
+  grid-template-rows: 1.5fr 1fr 0.1fr;
+  width: 350px;
+  height: 600px;
+  padding: 20px;
+  font-family: "Montserrat", sans-serif;
+  background-color: hsl(216, 50%, 16%);
+  border-radius: 20px;
+  box-shadow: 4px 4px 8px rgba(139, 172, 218, 0.2);
+}
+
+.wallet-img {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+  background-image: url(../../assets/img/image-equilibrium.jpg);
+  background-position: center;
+  background-size: cover;
+  border-radius: 10px;
+}
+.wallet-img svg {
+  visibility: hidden;
+}
+.wallet-img::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 255, 247, 0.4);
+  opacity: 0;
+  transition: opacity 1.3s;
+  pointer-events: none;
+  border-radius: 10px;
+}
+.wallet-img:hover {
+  cursor: pointer;
+}
+.wallet-img:hover svg {
+  visibility: visible;
+}
+.wallet-img:hover::before {
+  opacity: 1;
+  cursor: pointer;
+}
+
+.wallet-info__title {
+  font-size: 2rem;
+  color: hsl(0, 0%, 100%);
+  transition: color 500ms;
+}
+.wallet-info__title:hover {
+  color: hsl(178, 100%, 50%);
+  cursor: pointer;
+}
+
+.wallet-info__description {
+  font-size: 1.5rem;
+  color: hsl(215, 52%, 70%);
+}
+
+.wallet-info__coins {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.account__coins, .offer {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  gap: 10px;
+}
+
+.account__coins span {
+  font-size: 1.5rem;
+  font-weight: 500;
+  color: hsl(178, 100%, 50%);
+}
+
+.offer span {
+  font-size: 1.5rem;
+  font-weight: 500;
+  color: hsl(215, 52%, 70%);
+}
+
+.wallet-account {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  gap: 20px;
+}
+.wallet-account img {
+  width: 40px;
+  height: 40px;
+  border: 1px solid hsl(0, 0%, 100%);
+  border-radius: 100%;
+}
+
+.account__user {
+  font-size: 1.5rem;
+  font-weight: 500;
+  color: hsl(215, 52%, 70%);
+}
+.account__user span {
+  color: hsl(0, 0%, 100%);
+  transition: color 500ms;
+}
+.account__user span:hover {
+  color: hsl(178, 100%, 50%);
+  cursor: pointer;
+}
+
+/*# sourceMappingURL=desktop.css.map */

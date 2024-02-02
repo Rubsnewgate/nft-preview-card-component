@@ -1,0 +1,54 @@
+// Primary Colors
+$soft-blue: hsl(215, 52%, 70%);
+$cyan: hsl(178, 100%, 50%);
+
+// Secondary Colors
+$light-dark-blue: hsl(215, 32%, 27%);
+$medium-dark-blue: hsl(216, 50%, 16%);
+$very-dark-blue: hsl(217, 54%, 11%);
+$white: hsl(0, 0%, 100%);
+
+// Typography
+$primary-font: 'Montserrat', sans-serif;
+
+// Font Sizes
+$sm-font: 1.5rem;
+$md-font: 2.2rem;
+$lg-font: 2rem;
+
+// Font Weights
+$light: 400;
+$semi-bold: 500;
+$bold: 700;
+
+// General Resets
+* {
+	box-sizing: border-box;
+}
+html {
+	font-size: 62.5%;
+}
+body {
+	display: grid;
+	place-content: center;
+	width: 100%;
+	height: 100vh;
+	margin: 0;
+	background-color: $very-dark-blue;
+}
+
+// Flexbox Factory
+@mixin flexbox($direction:null, $justify:null, $align:null, $gap:null) {
+	display: flex;
+	flex-direction: $direction;
+	justify-content: $justify;
+	align-items: $align;
+	gap: $gap;
+}
+
+// Breakpoints
+@media screen and (min-width: 280px) and (max-width: 541px) {
+	body {
+		padding: 0 15px;
+	}
+}
