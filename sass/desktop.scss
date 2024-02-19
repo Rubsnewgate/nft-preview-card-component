@@ -3,7 +3,7 @@
 // Main Container
 .main-wrapper {
 	display: grid;
-	grid-template-rows: 1.5fr 1fr 0.1fr;
+	grid-template-rows: 1fr 0.7fr 0.3fr;
 	width: 350px;
 	height: 600px;
 	padding: 20px;
@@ -50,7 +50,12 @@
 }
 
 // Wallet Information
+.wallet-info {
+	@include flexbox(column, null, null, 25px);
+	margin-top: 20px;
+}
 .wallet-info__title {
+	margin: 0;
 	font-size: $lg-font;
 	color: $white;
 	transition: color 500ms;
@@ -60,11 +65,15 @@
 	}
 }
 .wallet-info__description {
+	margin: 0;
 	font-size: $sm-font;
 	color: $soft-blue;
 }
 .wallet-info__coins {
 	@include flexbox(row, space-between, center,);
+	height: 50px;
+	padding-bottom: 20px;
+	border-bottom: 1px solid $soft-blue;
 }
 .account__coins, .offer {
 	@include flexbox(row, null, center, 10px);
@@ -88,8 +97,8 @@
 .wallet-account {
 	@include flexbox(row, null, center, 20px);
 	img {
-		width: 40px;
-		height: 40px;
+		width: 34px;
+		height: 34px;
 		border: 1px solid $white;
 		border-radius: 100%;
 	}
